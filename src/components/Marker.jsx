@@ -1,15 +1,17 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { Button } from "@material-ui/core"
 
 function Marker(props) {
-  const { markerSize, onClick, info } = props
+  const { markerSize, onClick, info, zIndex } = props
 
   const sizeStyles = {
     width: markerSize,
     height: markerSize,
     marginLeft: `-${markerSize / 2}px`,
     marginTop: `-${markerSize / 2}px`,
-    minWidth: "0"
+    minWidth: "0",
+    zIndex
   }
 
   return (
@@ -21,6 +23,13 @@ function Marker(props) {
       {info.confirmed}
     </Button>
   )
+}
+
+Marker.propTypes = {
+  markerSize: PropTypes.number.isRequired,
+  onClick: PropTypes.func.isRequired,
+  info: PropTypes.instanceOf(Object).isRequired,
+  zIndex: PropTypes.number.isRequired
 }
 
 export default Marker

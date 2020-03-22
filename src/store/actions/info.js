@@ -1,6 +1,14 @@
 import { INFO_SUCCESS, INFO_REQUEST } from "../constants/info"
 import db from "../../firebaseConfig"
 
+function setZIndex(list) {
+  const sortedList = list.sort((a, b) => b.info.confirmed - a.info.confirmed)
+
+  return sortedList.map((item, key) => {
+    return { ...item, zIndex: key }
+  })
+}
+
 export function fetchInfo() {
   return async dispatch => {
     dispatch(infoRequest())
@@ -16,7 +24,7 @@ export function fetchInfo() {
             ...doc.data()
           })
         })
-        dispatch(infoSuccess(info))
+        dispatch(infoSuccess(setZIndex(info)))
       })
   }
 }

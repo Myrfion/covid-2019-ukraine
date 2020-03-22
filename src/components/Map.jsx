@@ -4,12 +4,7 @@ import GoogleMapReact from "google-map-react"
 import Marker from "./Marker"
 import InfoPopover from "./InfoPopover"
 
-const apiKey = "AIzaSyB07EhM_P6Io9wye7QRFrdQsdWO5FmLH0U"
-
-const lngRange = {
-  min: 22.1622,
-  max: 40.1974
-}
+const apiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY
 
 let defaultZoom = 5.8
 
@@ -26,20 +21,17 @@ if (screenWidth <= 320) {
 const defaultLat = 48.3794
 const defaultLng = 31.1656
 
+const defaultMarkerSize = 25
+const pxPerConfirmed = 2.5
+
+function getMarkerSize(confirmed) {
+  return defaultMarkerSize + pxPerConfirmed * confirmed
+}
+
 function Map(props) {
   const { data, className, loading } = props
 
   const [selected, setSelected] = useState(null)
-
-  function changeHanlder(newCoordinates) {
-    if (
-      newCoordinates.center.lng >= lngRange.min &&
-      newCoordinates.center.lng <= lngRange.max
-    ) {
-    } else {
-      console.log("out of boundriess")
-    }
-  }
 
   function onMarkerClick(key) {
     const selectedMarker = data.find(marker => marker.key === key)
@@ -58,13 +50,12 @@ function Map(props) {
         bootstrapURLKeys={{ key: apiKey }}
         defaultCenter={{ lat: defaultLat, lng: defaultLng }}
         defaultZoom={defaultZoom}
-        onChange={changeHanlder}
         options={{ styles: require("../assets/mapStyles.json") }}
       >
         {!loading &&
           data &&
           data.map(marker => {
-            const markerSize = 25 + 3 * marker.info.confirmed
+            const markerSize = getMarkerSize(marker.info.confirmed)
 
             return (
               <Marker
