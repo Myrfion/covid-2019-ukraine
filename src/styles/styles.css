@@ -1,0 +1,14 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@responsive {
+  .cv-w-400px {
+    width: 25rem !important;
+  }
+  .cv-w-3\/10 {
+    width: 30% !important;
+  }
+}
