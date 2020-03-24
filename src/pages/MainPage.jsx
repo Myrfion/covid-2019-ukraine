@@ -1,10 +1,10 @@
-import React, { useEffect } from "react"
-import { connect } from "react-redux"
-import InfoBlock from "../components/InfoBlock"
-import Map from "../components/Map"
-import { fetchInfo } from "../store/actions/info"
-import Header from "../components/Header"
-import Footer from "../components/Footer"
+import React, { useEffect } from 'react'
+import { connect } from 'react-redux'
+import InfoBlock from '../components/InfoBlock'
+import Map from '../components/Map'
+import { fetchInfo } from '../store/actions/info'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 function getTotal(list, key) {
   return list.reduce((acc, cur) => acc + cur.info[key], 0)
@@ -17,11 +17,11 @@ function MainPage(props) {
     getData()
   }, [])
 
-  const totalConfirmed = !loading ? getTotal(virusData, "confirmed") : 0
+  const totalConfirmed = !loading ? getTotal(virusData, 'confirmed') : 0
 
-  const totalDeaths = !loading ? getTotal(virusData, "deaths") : 0
+  const totalDeaths = !loading ? getTotal(virusData, 'deaths') : 0
 
-  const totalRecovered = !loading ? getTotal(virusData, "recovered") : 0
+  const totalRecovered = !loading ? getTotal(virusData, 'recovered') : 0
 
   return (
     <div className="min-h-screen bg-black flex flex-col items-center px-4 ">
@@ -69,12 +69,12 @@ function MainPage(props) {
 function mapStateToProps(state) {
   return {
     virusData: state.info.data,
-    loading: state.info.loading
+    loading: state.info.loading,
   }
 }
 
 const mapDispatchToProps = {
-  getData: fetchInfo
+  getData: fetchInfo,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(MainPage)
