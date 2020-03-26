@@ -6,7 +6,7 @@ function InfoList(props) {
 
   return (
     <div
-      className={`bg-gray-darker p-4 mt-4 border-gray-middle border border-solid hidden lg:flex flex-col overflow-scroll`}
+      className={`bg-gray-darker p-4 mt-4 border-gray-middle border border-solid hidden lg:flex flex-col overflow-y-scroll`}
     >
       {data.map(item => (
         <p className="text-gray-lighter text-md" key={item.name}>

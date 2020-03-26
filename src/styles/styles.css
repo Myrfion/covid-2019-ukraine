@@ -24,3 +24,19 @@
     height: 60vh !important;
   }
 }
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #222222;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #363636;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #363636;
+}

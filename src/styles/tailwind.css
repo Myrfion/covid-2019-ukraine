@@ -7370,6 +7370,26 @@ video {
   height: 60vh !important;
 }
 
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #222222;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  background: #363636;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+  background: #363636;
+}
+
 @media (min-width: 375px) {
   .xs\:sr-only {
     position: absolute !important;
