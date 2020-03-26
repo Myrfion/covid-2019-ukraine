@@ -50,7 +50,7 @@ function InfoBlock(props) {
         )}
       </div>
       {infoListData.length > 0 && (
-         <InfoList data={infoListData} valueColor={valueColor} />
+        <InfoList data={infoListData} valueColor={valueColor} />
       )}
     </div>
   )

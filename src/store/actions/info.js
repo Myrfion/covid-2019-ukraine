@@ -13,7 +13,7 @@ export function fetchInfo() {
   return async dispatch => {
     dispatch(infoRequest())
 
-    let info = [];
+    let info = []
 
     db.collection("info")
       .get()
