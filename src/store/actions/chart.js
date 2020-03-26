@@ -7,7 +7,7 @@ export function chart(daylyData, setChartData) {
 			{
 				label: 'Confirmed',
 				data: daylyData.map((e) => e.confirmed),
-				borderColor: COLORS.red 
+				borderColor: COLORS.red
 			},
 			{
 				label: 'Recovered',
