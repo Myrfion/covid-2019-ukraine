@@ -7354,6 +7354,22 @@ video {
   width: 30% !important;
 }
 
+.cv-max-h-75vh {
+  max-height: 75vh !important;
+}
+
+.cv-max-h-50vh {
+  max-height: 50vh !important;
+}
+
+.cv-height-75vh {
+  height: 75vh !important;
+}
+
+.cv-height-60vh {
+  height: 60vh !important;
+}
+
 @media (min-width: 375px) {
   .xs\:sr-only {
     position: absolute !important;
@@ -14082,6 +14098,22 @@ video {
 
   .xs\:cv-w-3\/10 {
     width: 30% !important;
+  }
+
+  .xs\:cv-max-h-75vh {
+    max-height: 75vh !important;
+  }
+
+  .xs\:cv-max-h-50vh {
+    max-height: 50vh !important;
+  }
+
+  .xs\:cv-height-75vh {
+    height: 75vh !important;
+  }
+
+  .xs\:cv-height-60vh {
+    height: 60vh !important;
   }
 }
 
@@ -20814,6 +20846,22 @@ video {
   .sm\:cv-w-3\/10 {
     width: 30% !important;
   }
+
+  .sm\:cv-max-h-75vh {
+    max-height: 75vh !important;
+  }
+
+  .sm\:cv-max-h-50vh {
+    max-height: 50vh !important;
+  }
+
+  .sm\:cv-height-75vh {
+    height: 75vh !important;
+  }
+
+  .sm\:cv-height-60vh {
+    height: 60vh !important;
+  }
 }
 
 @media (min-width: 768px) {
@@ -27544,6 +27592,22 @@ video {
 
   .md\:cv-w-3\/10 {
     width: 30% !important;
+  }
+
+  .md\:cv-max-h-75vh {
+    max-height: 75vh !important;
+  }
+
+  .md\:cv-max-h-50vh {
+    max-height: 50vh !important;
+  }
+
+  .md\:cv-height-75vh {
+    height: 75vh !important;
+  }
+
+  .md\:cv-height-60vh {
+    height: 60vh !important;
   }
 }
 
@@ -34276,6 +34340,22 @@ video {
   .lg\:cv-w-3\/10 {
     width: 30% !important;
   }
+
+  .lg\:cv-max-h-75vh {
+    max-height: 75vh !important;
+  }
+
+  .lg\:cv-max-h-50vh {
+    max-height: 50vh !important;
+  }
+
+  .lg\:cv-height-75vh {
+    height: 75vh !important;
+  }
+
+  .lg\:cv-height-60vh {
+    height: 60vh !important;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -41006,5 +41086,21 @@ video {
 
   .xl\:cv-w-3\/10 {
     width: 30% !important;
+  }
+
+  .xl\:cv-max-h-75vh {
+    max-height: 75vh !important;
+  }
+
+  .xl\:cv-max-h-50vh {
+    max-height: 50vh !important;
+  }
+
+  .xl\:cv-height-75vh {
+    height: 75vh !important;
+  }
+
+  .xl\:cv-height-60vh {
+    height: 60vh !important;
   }
 }

@@ -41,8 +41,7 @@ function Map(props) {
 
   return (
     <div
-      className={`mt-4 lg:mx-2 border-gray-middle border relative ${className}`}
-      style={{ height: 75 + "vh" }}
+      className={`border-gray-middle border relative cv-height-60vh lg:cv-height-75vh ${className}`}
     >
       {selected && <InfoPopover {...selected} />}
 

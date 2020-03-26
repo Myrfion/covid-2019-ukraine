@@ -1,8 +1,12 @@
 import React from "react"
 
-function Footer() {
+function Footer(props) {
+  const { className } = props
+
   return (
-    <div className="bg-gray-darker border-gray-middle border border-solid w-full mt-4 mx-4 px-2 py-2 text-sm text-gray-lighter text-center mt-4 lg:mt-auto mb-4">
+    <div
+      className={`bg-gray-darker border-gray-middle border border-solid w-full py-2 text-sm text-gray-lighter text-center w-full lg:mt-auto ${className}`}
+    >
       © 2020 Tymur Levtsun levtsuntimur@gmail.com
     </div>
   )

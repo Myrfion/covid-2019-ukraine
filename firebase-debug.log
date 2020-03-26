@@ -1,0 +1,30 @@
+[debug] [2020-03-24T23:35:06.402Z] ----------------------------------------------------------------------
+[debug] [2020-03-24T23:35:06.403Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy --only hosting:add-covid-2019-ukraine
+[debug] [2020-03-24T23:35:06.403Z] CLI Version:   7.11.0
+[debug] [2020-03-24T23:35:06.403Z] Platform:      darwin
+[debug] [2020-03-24T23:35:06.403Z] Node Version:  v12.13.0
+[debug] [2020-03-24T23:35:06.404Z] Time:          Wed Mar 25 2020 01:35:06 GMT+0200 (Eastern European Standard Time)
+[debug] [2020-03-24T23:35:06.404Z] ----------------------------------------------------------------------
+[debug] [2020-03-24T23:35:06.404Z] 
+[debug] [2020-03-24T23:35:06.409Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-03-24T23:35:06.410Z] > authorizing via signed-in user
+[debug] [2020-03-24T23:35:06.410Z] [iam] checking project covid-2019-ukraine-3c09b for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-03-24T23:35:06.411Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/covid-2019-ukraine-3c09b:testIamPermissions  
+
+[debug] [2020-03-24T23:35:07.471Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-24T23:35:07.473Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/covid-2019-ukraine-3c09b  
+ 
+[debug] [2020-03-24T23:35:07.773Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'covid-2019-ukraine-3c09b'...
+[info] 
+[info] i  deploying hosting
+[info] 
+[info] ✔  Deploy complete!
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/covid-2019-ukraine-3c09b/overview
+[debug] [2020-03-24T23:35:08.109Z] TypeError: Cannot read property 'deploys' of undefined
+    at /usr/local/lib/node_modules/firebase-tools/lib/deploy/index.js:84:36
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[error] 
+[error] Error: An unexpected error has occurred.

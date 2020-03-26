@@ -32,10 +32,8 @@ function InfoBlock(props) {
     : []
 
   return (
-    <div className={`${className}`}>
-      <div
-        className={`w-full bg-gray-darker py-4 px-1 inline-flex flex-col items-center border-gray-middle border border-solid`}
-      >
+    <div className={`w-full flex flex-col col-span-1 ${className}`}>
+      <div className="py-4 w-full bg-gray-darker flex flex-col items-center justify-center border-gray-middle border border-solid">
         <p className="text-sm xs:text-md md:text-lg lg:text-xl text-white text-center font-semibold">
           {label}
         </p>

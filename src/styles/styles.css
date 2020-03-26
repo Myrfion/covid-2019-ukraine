@@ -11,4 +11,16 @@
   .cv-w-3\/10 {
     width: 30% !important;
   }
+  .cv-max-h-75vh {
+    max-height: 75vh !important;
+  }
+  .cv-max-h-50vh {
+    max-height: 50vh !important;
+  }
+  .cv-height-75vh {
+    height: 75vh !important;
+  }
+  .cv-height-60vh {
+    height: 60vh !important;
+  }
 }

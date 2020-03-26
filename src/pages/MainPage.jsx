@@ -1,4 +1,5 @@
 import React, { useEffect } from "react"
+import PropTypes from "prop-types"
 import { connect } from "react-redux"
 import InfoBlock from "../components/InfoBlock"
 import Map from "../components/Map"
@@ -24,11 +25,11 @@ function MainPage(props) {
   const totalRecovered = !loading ? getTotal(virusData, "recovered") : 0
 
   return (
-    <div className="min-h-screen bg-black flex flex-col items-center px-4 ">
-      <Header />
-      <div className="w-full flex items-start flex-wrap lg:flex-no-wrap justify-between">
+    <div className="min-h-screen bg-black flex flex-col justify-between w-full items-center">
+      <div className="grid items-start px-4 grid-cols-3 lg:grid-cols-6 grid-flow-row-dense gap-4 w-full">
+        <Header className="col-span-3 lg:col-span-6 mt-4" />
         <InfoBlock
-          className="lg:ml-0 lg:mr-2 mt-4 cv-w-3/10 lg:cv-w-400px order-1"
+          className=" max-h-auto lg:cv-max-h-75vh col-span-1 order-1"
           label="Підтверджено"
           value={totalConfirmed}
           valueColor="red"
@@ -36,14 +37,13 @@ function MainPage(props) {
           virusData={virusData}
           dataKey="confirmed"
         />
-
         <Map
           loading={loading}
           data={virusData}
-          className="w-full order-5 lg:order-2"
+          className="w-full col-span-3 order-5 lg:order-2"
         />
         <InfoBlock
-          className="lg:mx-2 mt-4 cv-w-3/10 lg:cv-w-400px order-3"
+          className=" max-h-auto lg:cv-max-h-50vh col-span-1 order-3"
           label="Смерті"
           value={totalDeaths}
           valueColor="white"
@@ -52,7 +52,7 @@ function MainPage(props) {
           dataKey="deaths"
         />
         <InfoBlock
-          className="lg:ml-2 lg:mr-0 mt-4 cv-w-3/10 lg:cv-w-400px order-4"
+          className="max-h-auto lg:cv-max-h-50vh col-span-1 order-4"
           label="Одужали"
           value={totalRecovered}
           valueColor="green"
@@ -61,7 +61,9 @@ function MainPage(props) {
           dataKey="recovered"
         />
       </div>
-      <Footer />
+      <div className="p-4 w-full">
+        <Footer className="w-full" />
+      </div>
     </div>
   )
 }
@@ -75,6 +77,12 @@ function mapStateToProps(state) {
 
 const mapDispatchToProps = {
   getData: fetchInfo
+}
+
+MainPage.propTypes = {
+  getData: PropTypes.func.isRequired,
+  virusData: PropTypes.instanceOf(Array).isRequired,
+  loading: PropTypes.bool.isRequired
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(MainPage)
